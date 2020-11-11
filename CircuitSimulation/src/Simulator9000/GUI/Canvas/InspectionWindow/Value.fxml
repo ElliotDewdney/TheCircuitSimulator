@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="Box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Canvas.InspectionWindow.ValueController">
+   <children>
+      <Label fx:id="Title" maxHeight="1.7976931348623157E308" minHeight="-Infinity" text="Label">
+         <HBox.margin>
+            <Insets right="30.0" />
+         </HBox.margin></Label>
+   </children>
+   <padding>
+      <Insets bottom="10.0" top="10.0" />
+   </padding>
+</HBox>

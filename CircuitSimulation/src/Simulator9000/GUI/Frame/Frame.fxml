@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<BorderPane fx:id="outerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Frame.Controller">
+    <center>
+        <TabPane fx:id="TheBigPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Home">
+                    <content>
+                        <AnchorPane style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <WebView fx:id="HelpDialoge" layoutX="35.0" prefHeight="344.0" prefWidth="469.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                        </AnchorPane>
+                    </content></Tab>
+            </tabs>
+        </TabPane>
+    </center>
+    <top>
+        <HBox BorderPane.alignment="TOP_LEFT">
+            <children>
+                <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="600.0" HBox.hgrow="ALWAYS">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#FileNew" text="New" />
+                                <MenuItem mnemonicParsing="false" onAction="#ActionDelete" text="Close" />
+                        <Menu mnemonicParsing="false" text="Export to Image">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#CopyToClipboard" text="Copy to Clipboard" />
+                              <MenuItem mnemonicParsing="false" onAction="#FileExport" text="Export" />
+                          </items>
+                        </Menu>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Action">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#ActionDelete" text="Delete" />
+                        <MenuItem mnemonicParsing="false" onAction="#ActionSettings" text="Settings" />
+                        <MenuItem fx:id="Simulate" mnemonicParsing="false" onAction="#ActionSimulate" text="Simulate" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#HelpAbout" text="About" />
+                                <MenuItem mnemonicParsing="false" onAction="#HelpHelp" text="Help" />
+                            </items>
+                        </Menu>
+                    </menus>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </MenuBar>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <Accordion minWidth="120.0" prefWidth="130.0">
+            <panes>
+                <TitledPane animated="false" text="Basic">
+                    <content>
+                        <AnchorPane fx:id="Back1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="50.0" style="-fx-background-color: LightBlue;">
+                            <children>
+                                <VBox fx:id="BasicComp" prefHeight="200.0" prefWidth="50.0" spacing="50">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding></VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Advanced">
+                    <content>
+                        <AnchorPane fx:id="Back2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="50.0" style="-fx-background-color: LightBlue;">
+                            <children>
+                                <VBox fx:id="AdvancedComp" prefHeight="200.0" prefWidth="50.0" spacing="50">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding></VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Other">
+                    <content>
+                        <AnchorPane fx:id="Back3" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="50.0" style="-fx-background-color: LightBlue;">
+                            <children>
+                                <VBox fx:id="OtherComp" prefHeight="200.0" prefWidth="50.0" spacing="50">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding></VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </left>
+</BorderPane>

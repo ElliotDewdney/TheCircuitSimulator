@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GUITools.SettingPane.Controller">
+   <top>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #bfbfbf;">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#ApplyAndClose" text="Apply and Close" />
+            <Button mnemonicParsing="false" onAction="#Apply" text="Apply" />
+            <Button mnemonicParsing="false" onAction="#Close" text="Close" />
+            <Button mnemonicParsing="false" onAction="#ResetToDefalts" text="Reset to defalts" />
+        </buttons>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </ButtonBar>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="ListSettings" onMouseClicked="#OnEdit" prefHeight="358.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane layoutX="100.0" layoutY="57.0" prefHeight="358.0" prefWidth="417.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <VBox fx:id="SettingsPane" spacing="10.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

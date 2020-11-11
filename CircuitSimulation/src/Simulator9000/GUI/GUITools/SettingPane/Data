@@ -1,0 +1,15 @@
+Theme <== Light
+backgroundColour <== 0x6ce6cbff
+WireColour <== 0xb02020ff
+Standard <== IEEE
+EditorUIScale <== 10
+WireThiccness <== 3
+SimulationUIScale <== 10
+FilePath <== C://Documents/
+Mesurment <== Metric
+Autosave <== true
+Reveal <== true
+AutoSaveTime <== 5
+gridSize <== 4
+depth <== 4
+maxInterations <== 2048
